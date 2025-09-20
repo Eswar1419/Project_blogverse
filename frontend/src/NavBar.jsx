@@ -1,17 +1,14 @@
-import React from "react"
-const NavBar=()=>{
-    return(
-        <div className="flex justify-around items-center h-16 border-b-2 border-black shadow-lg shadow-blue-400">
-            <h1 className="text-2xl font-bold ">BlogVerse</h1>
-            <button className="text-gray-700 hover:bg-blue-300 px-5 py-2 rounded-2xl ">
-                Home
-            </button>
-            <div className="flex gap-5">
-                <button className="">SignIn</button>
-                <button className="bg-blue-600 text-white px-5 py-2 rounded-2xl shadow-lg shadow-blue-950">signUp</button>
-                
+import {Link} from "react-router-dom"
+const NavBar = () => {
+    return (
+        <div className="  cursor-pointer flex justify-around items-center h-16 border-b-gray-300 border-b-1 w-full">
+            <h1 className="text-2xl font-bold">BlogVerse</h1>
+            < Link to="/Home" className="text-gray-700 hover:bg-gray-200 rounded-lg px-5 ">Home</Link>
+            <div className=" flex justify-center items-center gap-5">
+                <Link to="/signin" className=" cursor-pointer font-semibold">SignIn</Link>
+                <Link to="/signup" className="hover:bg-blue-700 bg-blue-600 text-white px-5 py-2 rounded-lg cursor-pointer">SignUp</Link>
             </div>
         </div>
     )
 }
- export default NavBar
+export default NavBar
