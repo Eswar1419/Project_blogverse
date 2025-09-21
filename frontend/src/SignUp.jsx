@@ -52,7 +52,7 @@ const SignUp = () => {
 
         }
         else{
-            setsuccess("your acc is creted")
+            setsuccess("your acc is created")
              setFormData({
                 fullName: "",
                 email: "",
