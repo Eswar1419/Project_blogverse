@@ -5,7 +5,7 @@ function Home() {
         id: 1,
         title: "Getting Started with React and Tailwind CSS",
         author: "Prem Sagar",
-        timeRead:" 5 min read",
+        timeRead: " 5 min read",
         postedOn: "Jan 10, 2024",
         content: "React and Tailwind CSS are a powerful combination for building modern web applications. In this article, we'll explore how to set up a React project with Tailwind CSS and create a simple responsive layout.",
         Image: "1.jpg",
@@ -14,7 +14,7 @@ function Home() {
         id: 2,
         title: "Understanding JavaScript Closures",
         author: "Asha Deepthi",
-        timeRead:" 7 min read",
+        timeRead: " 7 min read",
         postedOn: "Dec 05, 2023",
         content: "JavaScript closures are a fundamental concept that every developer should understand. In this article, we'll dive deep into closures, how they work, and practical examples of their usage.",
         Image: "vite.svg",
@@ -23,7 +23,7 @@ function Home() {
         id: 3,
         title: "A Guide to Responsive Web Design",
         author: "Alekhya Rani",
-        timeRead:" 6 min read",
+        timeRead: " 6 min read",
         postedOn: "Nov 20, 2023",
         content: "Responsive web design is essential in today's mobile-first world. This guide will walk you through the principles of responsive design and how to implement them using CSS and modern frameworks.",
         Image: "18.avif",
@@ -32,7 +32,7 @@ function Home() {
         id: 4,
         title: "Exploring the New Features of ES2021",
         author: "Sravanthi",
-        timeRead:" 8 min read",
+        timeRead: " 8 min read",
         postedOn: "Oct 01, 2023",
         content: "ES2021 introduces several new features that enhance the JavaScript language. In this article, we'll explore these features and how they can improve your code.",
         Image: "9.jpg",
@@ -41,7 +41,7 @@ function Home() {
         id: 5,
         title: "Mastering Flexbox for Layout Design",
         author: "Leela Avinash",
-        timeRead:" 10 min read",
+        timeRead: " 10 min read",
         postedOn: "Sep 15, 2023",
         content: "Flexbox is a powerful layout module in CSS that allows for flexible and responsive design. This article will guide you through the basics of Flexbox and how to use it effectively in your projects.",
         Image: "7.webp",
@@ -49,8 +49,8 @@ function Home() {
     }, {
         id: 6,
         title: "Introduction to TypeScript for JavaScript Developers",
-        author:"Charan Teja",
-        timeRead:" 9 min read",
+        author: "Charan Teja",
+        timeRead: " 9 min read",
         postedOn: "Aug 10, 2023",
         content: "TypeScript is a superset of JavaScript that adds static typing and other features to enhance developer productivity. This introduction will cover the basics of TypeScript and how to get started.",
         Image: "10.jpg",
@@ -59,40 +59,42 @@ function Home() {
 
     return (
         <div className="min-h-screen flex flex-col items-center  bg-gray-50">
-            <NavBar/>
-            <p className="text-4xl font-bold">Welcome back, Dev Astra</p>
-            <p className="text-lg text-gray-500 mt-4"> Discover amazing stories, insights, and ideas from our community of writers.</p>
-            <div className=" flex gap-10 justify-around mt-5 ">
-                <button className="px-10 py-4 cursor-pointer bg-blue-700 hover:bg-blue-900 shadow-md text-white rounded-xl">Write a New Post</button>
-                <button className="px-10 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-xl" >View My Posts</button>
-            </div>
-            <div className="mt-5 flex gap-15 flex-wrap justify-center w-[90%] rounded-lg shadow-lg pb-5">
-                {
-                    posts.map((post) => (
-                        <div className="w-96 bg-white shadow-lg rounded-lg" key={post.id}>
-                            <div className="relative">
-                                <img className=" rounded-t-lg  shadow-lg h-52 w-96 " src={post.Image} alt="Writing" />
-                                <button className="p-3 text-sm bg-white rounded-full absolute cursor-pointer right-4 top-3">Save</button>
-                            </div>
-                            <div className="flex gap-5 mt-3 px-2">
-                                <img className="rounded-full shadow-lg h-12 w-12 " src={post.profilePic} alt="Writing" />
-                                <div>
-                                    <p className="font-semibold">{post.author}</p>
-                                    <p className="text-gray-500">{post.postedOn} - {post.timeRead}</p>
+            <NavBar />
+            <div className="flex flex-col items-center px-10 md:px-5 lg:px-2 mt-5">
+                <p className="text-4xl font-bold">Welcome back, Dev Astra</p>
+                <p className="text-lg text-gray-500 mt-4"> Discover amazing stories, insights, and ideas from our community of writers.</p>
+                <div className=" flex gap-10 justify-around mt-5 ">
+                    <button className="px-3 py-4 cursor-pointer bg-blue-700 hover:bg-blue-900 shadow-md text-white rounded-xl">Write a New Post</button>
+                    <button className="px-5 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-xl" >View My Posts</button>
+                </div>
+                <div className="mt-5 flex gap-15 flex-wrap justify-center w-[90%] rounded-lg shadow-lg pb-5">
+                    {
+                        posts.map((post) => (
+                            <div className="w-80 bg-white shadow-lg rounded-lg" key={post.id}>
+                                <div className="relative">
+                                    <img className=" rounded-t-lg  shadow-lg h-52 w-96 " src={post.Image} alt="Writing" />
+                                    <button className="p-3 text-sm bg-white rounded-full absolute cursor-pointer right-4 top-3">Save</button>
                                 </div>
-                            </div>
-                            <div className="mt-3 px-3 flex flex-col gap-3">
-                                <p className="text-2xl font-bold ">{post.title}</p>
-                                <p className="text-gray-600">
-                                    {post.content}
-                                </p>
-                            </div>
-                            <div className="mt-3 mb-3  px-3 flex justify-end">
-                                <button className="text-blue-500 hover:underline cursor-pointer">Read more</button>
-                            </div>
-                        </div>))
-                }
+                                <div className="flex gap-5 mt-3 px-2">
+                                    <img className="rounded-full shadow-lg h-12 w-12 " src={post.profilePic} alt="Writing" />
+                                    <div>
+                                        <p className="font-semibold">{post.author}</p>
+                                        <p className="text-gray-500">{post.postedOn} - {post.timeRead}</p>
+                                    </div>
+                                </div>
+                                <div className="mt-3 px-3 flex flex-col gap-3">
+                                    <p className="text-2xl font-bold ">{post.title}</p>
+                                    <p className="text-gray-600">
+                                        {post.content}
+                                    </p>
+                                </div>
+                                <div className="mt-3 mb-3  px-3 flex justify-end">
+                                    <button className="text-blue-500 hover:underline cursor-pointer">Read more</button>
+                                </div>
+                            </div>))
+                    }
 
+                </div>
             </div>
         </div>
     )

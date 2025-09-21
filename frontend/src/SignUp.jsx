@@ -108,7 +108,7 @@ const SignUp = () => {
             <p className="text-gray-500 text-xl text-center font-semibold ">
                 Create your account and start your Journey
             </p>
-            <form onSubmit={handleSubmit} className="flex flex-col border-1 border-black w-1/3 py-7 justify-center items-center gap-5 rounded-2xl shadow-lg shadow-gray-300 hover:shadow-black ">
+            <form onSubmit={handleSubmit} className="flex flex-col border-1 border-black w-[80%] md:w-1/3 py-7 justify-center items-center gap-5 rounded-2xl shadow-lg shadow-gray-300 hover:shadow-black ">
                 <div className="w-[90%] flex flex-col gap-2">
 
                     <p className=" font-semibold text-md text-gray-700">Full_Name</p>
